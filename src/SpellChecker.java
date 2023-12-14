@@ -55,7 +55,7 @@ public class SpellChecker {
     }
 
     public void loadDictionary() {
-        try (BufferedReader reader = new BufferedReader(new FileReader("/Users/emirsafayavuz/IdeaProjects/SpellChecker/src/dict.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/dict.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] words = line.toLowerCase().split("\\b\\W+\\b");
@@ -74,7 +74,7 @@ public class SpellChecker {
 
     public Set<String> spellCheckFile() {
         Set<String> misspelledWords = new HashSet<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader("/Users/emirsafayavuz/IdeaProjects/SpellChecker/src/textfile.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/textfile.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] words = line.toLowerCase().split("\\b\\W+\\b");
